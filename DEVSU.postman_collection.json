@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "2c721d91-1ce3-4d57-94fc-1a91bb477c48",
+		"name": "DEVSU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Crear-Persona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"Oscar Perez\",\n    \"genero\":\"M\",\n    \"edad\":27,\n    \"identificación\":\"05403056-0\",\n    \"direccion\":\"Casa 1 pasaje 2\" ,\n    \"telefono\":\"22605839\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/personas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "POST-Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identificacion\": \"1234567890\",\n    \"clienteId\": \"cliente1231\",\n    \"contraseña\": \"MiContraseñaSegura\",\n    \"estado\": \"Activo\",\n    \"nombre\":\"Oscar Perez\",\n    \"genero\":\"M\",\n    \"edad\":27,\n    \"identificación\":\"05403056-0\",\n    \"direccion\":\"Casa 1 pasaje 2\" ,\n    \"telefono\":\"22605839\"  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}clientes",
+							"host": [
+								"{{host}}clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"094896a1-7869-428a-8b9d-a49e8e30e23f\",\n    \"clienteId\": \"cliente1231\",\n    \"contraseña\": \"MiContraseñaSegura123\",\n    \"estado\": \"Activo\",\n    \"nombre\":\"Oscar Perez\",\n    \"genero\":\"M\",\n    \"edad\":27,\n    \"identificación\":\"05403056-0\",\n    \"direccion\":\"Casa 1 pasaje 2\" ,\n    \"telefono\":\"22605839\"  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clientes/6915c23b-fe7c-461f-93c3-62228ce3a9bd",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"6915c23b-fe7c-461f-93c3-62228ce3a9bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientes/07106a0e-8fb8-4483-ac87-6b746930b45d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"07106a0e-8fb8-4483-ac87-6b746930b45d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientes/07106a0e-8fb8-4483-ac87-6b746930b45d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"07106a0e-8fb8-4483-ac87-6b746930b45d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "POSt-Movimientos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroCuenta\":\"9876543210\",\n    \"fecha\":\"2023-10-25T22:11:45.123Z\",\n    \"tipoMovimiento\":\"Pago X\",\n    \"valor\":-201\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}movimientos",
+							"host": [
+								"{{host}}movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}movimientos",
+							"host": [
+								"{{host}}movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Movimientos By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}movimientos/0c71f78e-d071-464e-b21f-5a252aa4e64a",
+							"host": [
+								"{{host}}movimientos"
+							],
+							"path": [
+								"0c71f78e-d071-464e-b21f-5a252aa4e64a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - Movimientos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}movimientos/0c71f78e-d071-464e-b21f-5a252aa4e64a",
+							"host": [
+								"{{host}}movimientos"
+							],
+							"path": [
+								"0c71f78e-d071-464e-b21f-5a252aa4e64a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "GET-Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}cuentas",
+							"host": [
+								"{{host}}cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-Cuentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroCuenta\": \"9876543210\",\n    \"tipoCuenta\": \"Ahorros\",\n    \"saldoInicial\": 1500.50,\n    \"estado\": \"Activo\",\n    \"clienteId\": \"026e8414-c07d-458b-902c-5670cc2ed172\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}cuentas",
+							"host": [
+								"{{host}}cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Cuentas Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cuentas/7509a406-f90e-4ab2-a4de-8c2b61547c33",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cuentas",
+								"7509a406-f90e-4ab2-a4de-8c2b61547c33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cuentas/cliente/148b8d09-44e1-43e8-a0ad-a682c0bc1ae0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cuentas",
+								"cliente",
+								"148b8d09-44e1-43e8-a0ad-a682c0bc1ae0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reporte",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}reportes?fechas=2023-10-24,2023-10-25&clienteId=cliente1231",
+					"host": [
+						"{{host}}reportes"
+					],
+					"query": [
+						{
+							"key": "fechas",
+							"value": "2023-10-24,2023-10-25"
+						},
+						{
+							"key": "clienteId",
+							"value": "cliente1231"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8080/api/",
+			"type": "default"
+		}
+	]
+}
